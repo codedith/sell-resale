@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.FilterScreenActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/common_tool_bars" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/neosans_pro_regular"
+                android:text="@string/sort"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/date_Published"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="7dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/datePublished_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/neosans_pro_regular"
+                                android:text="@string/date_published"
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/relevents"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="7dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/relvaanceTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/neosans_pro_regular"
+                                android:text="@string/relevance"
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/lowest_Prices"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="7dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/lowest_Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/neosans_pro_regular"
+                                android:text="@string/price_lowest"
+                                android:textColor="@color/text_color"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangle_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/high_prieces"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:cardCornerRadius="7dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/highest_Price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/neosans_pro_regular"
+                                android:text="@string/price_highest"
+                                android:textColor="@color/text_color"
+                                android:textStyle="normal" />
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/neosans_pro_regular"
+                android:text="@string/category"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/category_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_spinner"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="2dp"
+                android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:id="@+id/subcategory_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:text="@string/subcategory"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/subcategory_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="2dp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/neosans_pro_regular"
+                android:text="@string/price"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2.3">
+
+                <EditText
+                    android:id="@+id/et_lowestPirce"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hollow_bg"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight=".3"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="center"
+                    android:text="@string/to"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:id="@+id/et_highestPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/hollow_bg"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:gravity="center_horizontal|center_vertical"
+
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/neosans_pro_regular"
+                android:text="@string/country"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/country_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_spinner"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="2dp"
+                android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:id="@+id/state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:text="@string/state"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/state_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="2dp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/city_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:text="@string/city"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/city_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingStart="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="2dp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/bt_Submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/neosans_pro_regular"
+        android:text="@string/apply"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

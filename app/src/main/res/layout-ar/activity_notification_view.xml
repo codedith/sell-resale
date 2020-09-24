@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/tools"
+        layout="@layout/common_tool_bars" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerOfNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tools"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/notice_listNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/neosans_pro_regular"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:text="@string/notification_list_not_found"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+rootProject.name='WaseetApp'
+include ':app'

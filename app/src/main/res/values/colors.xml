@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff814f</color>
+    <color name="colorPrimaryDark">#ff814f</color>
+    <color name="colorAccent">#ff814f</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPurple">#F1D6CD</color>
+    <color name="purple">#ff814f</color>
+    <color name="black">@android:color/black</color>
+    <color name="grey">@android:color/darker_gray</color>
+    <color name="white">@android:color/background_light</color>
+    <color name="text_color">#050505</color>
+    <color name="language_select">#f0f0ee</color>
+
+    <color name="new_text_color">#050505</color>
+    <color name="new_toolbar_color">#ff814f</color>
+
+    <color name="lite_orange">#F6D4C6</color>
+    <color name="lite_orange1">#FBE8E1</color>
+
+
+</resources>

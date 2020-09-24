@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/my_PostsMenu"
+        android:icon="@drawable/my_post"
+        android:title="@string/my_posts" />
+
+    <item
+        android:id="@+id/my_FavoritesMenu"
+        android:icon="@drawable/my_favorite"
+        android:title="@string/my_favorites" />
+
+    <item
+        android:id="@+id/language_Region_ChangeMenu"
+        android:icon="@drawable/language_and_region"
+        android:title="@string/language_and_region_select" />
+
+    <item
+        android:id="@+id/helpMenu"
+        android:icon="@drawable/help"
+        android:title="@string/help" />
+
+    <item
+        android:id="@+id/Rrate_UsMenu"
+        android:icon="@drawable/rate_us"
+        android:title="@string/rate_us" />
+
+    <item
+        android:id="@+id/terms_ConditionsMenu"
+        android:icon="@drawable/terms_and_conditions"
+        android:title="@string/terms_and_conditions" />
+
+    <item
+        android:id="@+id/notice_UsMenu"
+        android:icon="@drawable/bell"
+        android:title="@string/notifications" />
+
+    <item
+        android:id="@+id/about_UsMenu"
+        android:icon="@drawable/about_us"
+        android:title="@string/about_us" />
+
+    <item
+        android:id="@+id/logout_Menu"
+        android:visible="false"
+        android:icon="@drawable/signs"
+        android:title="@string/logout" />
+</menu>

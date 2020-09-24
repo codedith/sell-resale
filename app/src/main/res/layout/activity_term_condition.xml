@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.TermConditionActivity">
+
+    <include layout="@layout/common_tool_bars" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        app:cardBackgroundColor="@color/colorPurple"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="1dp">
+
+        <TextView
+            android:id="@+id/tc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/neosans_pro_regular"
+            android:gravity="center"
+            android:text="@string/lorem_ipsum_text"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

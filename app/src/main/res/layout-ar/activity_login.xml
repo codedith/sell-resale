@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.LoginActivity">
+
+    <include layout="@layout/common_tool_bars" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:src="@drawable/appimage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:text="@string/email"
+                        android:textColor="@color/text_color"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/signIn_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/hollow_bg"
+                        android:drawableEnd="@drawable/ic_email_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/purple"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:hint="@string/enter_email_address"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:text="@string/password"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_color"
+                        android:textSize="12sp" />
+
+
+                    <EditText
+                        android:id="@+id/signIn_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/hollow_bg"
+                        android:drawableEnd="@drawable/ic_lock_open_black_24dp"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/purple"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:hint="@string/enter_password"
+
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:padding="5dp"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/text_color"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/signIn_signInButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/button_bg"
+                        android:fontFamily="@font/neosans_pro_regular"
+                        android:text="@string/login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:id="@+id/signIn_signUpButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45.0dip"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:tag="binding_14">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/neosans_pro_regular"
+                            android:text="@string/don_t_have_account_yet"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/sign_up_loginpage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/button_bg"
+                            android:fontFamily="@font/neosans_pro_regular"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="@string/signup"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/or_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/neosanspro_medium"
+                        android:text="@string/or"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/neosans_pro_regular"
+                    android:padding="5dp"
+                    android:text="@string/continue_without_login"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
